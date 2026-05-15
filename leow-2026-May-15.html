@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Training Program | May 2026</title>
+  <style>
+    :root {
+      --yoshi-green: #4CAF50;
+      --mario-yellow: #FFEB3B;
+      --mario-pink: #E91E63;
+      --bg-dark: #1a1a2e;
+      --bg-card: #16213e;
+      --text-primary: #ffffff;
+      --text-secondary: #b0b0b0;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-primary);
+      line-height: 1.6;
+      padding: 20px;
+    }
+    
+    .container { max-width: 900px; margin: 0 auto; }
+    
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 30px;
+      background: linear-gradient(135deg, var(--yoshi-green), #2E7D32);
+      border-radius: 16px;
+    }
+    
+    header h1 { font-size: 2rem; margin-bottom: 10px; }
+    header .subtitle { color: rgba(255,255,255,0.9); font-size: 1.1rem; }
+    header .date {
+      margin-top: 15px;
+      font-weight: bold;
+      background: var(--mario-yellow);
+      color: #000;
+      display: inline-block;
+      padding: 5px 15px;
+      border-radius: 20px;
+    }
+    
+    section {
+      background: var(--bg-card);
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 25px;
+    }
+    
+    h2 {
+      color: var(--yoshi-green);
+      border-bottom: 2px solid var(--yoshi-green);
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      font-size: 1.4rem;
+    }
+    
+    h3 { color: var(--mario-pink); margin: 20px 0 10px; }
+    
+    .goal-box {
+      background: linear-gradient(135deg, var(--mario-pink), #AD1457);
+      padding: 20px;
+      border-radius: 12px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    
+    .goal-box h3 { color: white; margin: 0 0 5px; }
+    .goal-box p { font-size: 1.5rem; font-weight: bold; }
+    
+    .tennis-note {
+      background: linear-gradient(135deg, #1565C0, #0D47A1);
+      padding: 15px;
+      border-radius: 10px;
+      margin: 15px 0;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .tennis-note .icon { font-size: 2rem; }
+    
+    .highlight-box {
+      background: rgba(76, 175, 80, 0.1);
+      border-left: 4px solid var(--yoshi-green);
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .warning-box {
+      background: rgba(255, 235, 59, 0.1);
+      border-left: 4px solid var(--mario-yellow);
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+    th, td { padding: 10px 8px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 0.9rem; }
+    th { background: rgba(76, 175, 80, 0.2); color: var(--yoshi-green); }
+    tr:hover { background: rgba(255,255,255,0.03); }
+    
+    a { color: var(--mario-yellow); }
+    a:hover { color: var(--yoshi-green); }
+    
+    .day-detail {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 15px;
+      margin: 15px 0;
+    }
+    
+    .day-detail h4 {
+      color: var(--mario-yellow);
+      margin: 0 0 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .day-detail h4 .duration {
+      font-size: 0.85rem;
+      background: var(--mario-pink);
+      padding: 3px 10px;
+      border-radius: 12px;
+      color: white;
+    }
+    
+    pre {
+      background: rgba(0,0,0,0.3);
+      padding: 12px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 10px 0;
+      font-size: 0.9rem;
+    }
+    
+    .protocol-box {
+      background: rgba(233, 30, 99, 0.15);
+      border: 1px solid var(--mario-pink);
+      border-radius: 10px;
+      padding: 15px;
+      margin: 15px 0;
+    }
+    
+    .protocol-box h3 { color: var(--mario-pink); margin-top: 0; }
+    
+    .week-section {
+      background: rgba(255,255,255,0.02);
+      border: 1px dashed rgba(255,255,255,0.15);
+      border-radius: 10px;
+      padding: 15px;
+      margin: 15px 0;
+    }
+    
+    .week-section h3 {
+      color: var(--yoshi-green);
+      margin-top: 0;
+    }
+    
+    footer { text-align: center; margin-top: 40px; padding: 20px; color: var(--text-secondary); font-size: 0.9rem; }
+    
+    @media (max-width: 600px) {
+      body { padding: 10px; }
+      header h1 { font-size: 1.5rem; }
+      table { font-size: 0.8rem; }
+      th, td { padding: 6px 4px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🏋️ Your Training Program</h1>
+      <div class="subtitle">Personal Training Plan</div>
+      <div class="date">May 2026</div>
+    </header>
+
+    <!-- GOAL & PROFILE -->
+    <section>
+      <div class="goal-box">
+        <h3>🎯 YOUR GOAL</h3>
+        <p>Strong and well defined</p>
+      </div>
+      
+      <div class="tennis-note">
+        <span class="icon">🎾</span>
+        <div><strong>Tennis and activities as normal</strong></div>
+      </div>
+      
+      <div class="highlight-box">
+        <strong>You:</strong> 50 years old, 5'7", 155 lbs, 10+ years CrossFit (but 3 years off)<br>
+        <strong>Muscle memory is on your side.</strong>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section>
+      <h2>📖 How This Works</h2>
+      
+      <div class="highlight-box">
+        <strong>Based on Dan John and Pavel Tsatsouline's formulas for older, advanced athletes.</strong><br>
+        Weights and reps are guidelines, not rules. Your body decides what's right.
+      </div>
+      
+      <h3>The RPE Approach (Rate of Perceived Exertion)</h3>
+      <p>How hard something feels, not what the scale says.</p>
+      
+      <table>
+        <tr><th>Day</th><th>Target Feel</th><th>What This Means</th></tr>
+        <tr><td><strong>Day A (Barbell)</strong></td><td>Hard</td><td>You want to feel a difficult push. 5set3rep should feel challenging by set 4-5.</td></tr>
+        <tr><td><strong>Day B (KB EMOM)</strong></td><td>Moderate</td><td>You're building. 7-10 reps per minute should feel achievable but not easy.</td></tr>
+        <tr><td><strong>Day C (Bodyweight + KB)</strong></td><td>Hard</td><td>Hard bodyweight sets, then a short KB burn. Push through it.</td></tr>
+        <tr><td><strong>Day D (Bodyweight Light)</strong></td><td>Light</td><td>This should feel light. Recovery day. Move well, not hard.</td></tr>
+      </table>
+      
+      <div class="protocol-box">
+        <h3>The Simple Rule</h3>
+        <p>Heavy days (A, C): You want to feel the work.</p>
+        <p>Light days (D): You want to feel like you could do more.</p>
+        <p>If Day A feels too easy, add weight.</p>
+        <p>If Day A feels brutal, take weight off.</p>
+      </div>
+      
+      <p><strong>We're not following a rigid formula.</strong> We're building a sustainable practice that adapts to how you feel. This is why you establish weights in Week 1 - so you have a baseline to compare against.</p>
+    </section>
+
+    <!-- MAIN TABLE -->
+    <section>
+      <h2>📅 The Program</h2>
+      <p style="margin-bottom: 15px; color: var(--text-secondary);">Click any cell to see what to do that day</p>
+      
+      <table>
+        <tr>
+          <th>Day</th>
+          <th>Main Work</th>
+          <th><a href="#week1">Week 1</a></th>
+          <th><a href="#week2">Week 2</a></th>
+          <th><a href="#week3">Week 3</a></th>
+          <th><a href="#week4">Week 4</a></th>
+          <th>Duration</th>
+        </tr>
+        <tr>
+          <td><strong>Day A</strong><br><small>Barbell</small></td>
+          <td>Squat + OHP (5set3rep)<br>Pushups + Pullups</td>
+          <td><a href="#week1-a">Establish<br>weights</a></td>
+          <td><a href="#week2-a">Same<br>weights</a></td>
+          <td><a href="#week3-a">Try +5lbs</a></td>
+          <td><a href="#week4-a">Keep or<br>back off</a></td>
+          <td>60-75 min</td>
+        </tr>
+        <tr>
+          <td><strong>Day B</strong><br><small>KB EMOM</small></td>
+          <td>KB Swings EMOM</td>
+          <td><a href="#week1-b">7-10<br>reps</a></td>
+          <td><a href="#week2-b">7-10<br>reps</a></td>
+          <td><a href="#week3-b">8-10<br>reps</a></td>
+          <td><a href="#week4-b">8-10<br>reps</a></td>
+          <td>30-40 min</td>
+        </tr>
+        <tr>
+          <td><strong>Day C</strong><br><small>Bodyweight + KB</small></td>
+          <td>Pushups + Pullups<br>KB HIIT</td>
+          <td><a href="#week1-c">15-20<br>reps</a></td>
+          <td><a href="#week2-c">15-20<br>reps</a></td>
+          <td><a href="#week3-c">15-20<br>reps</a></td>
+          <td><a href="#week4-c">15-20<br>reps</a></td>
+          <td>45-60 min</td>
+        </tr>
+        <tr>
+          <td><strong>Day D</strong><br><small>Bodyweight Light</small></td>
+          <td>Pushups + Pullups<br>Mobility</td>
+          <td><a href="#week1-d">5 sets<br>12-15 reps</a></td>
+          <td><a href="#week2-d">5 sets<br>12-15 reps</a></td>
+          <td><a href="#week3-d">5 sets<br>12-15 reps</a></td>
+          <td><a href="#week4-d">5 sets<br>12-15 reps</a></td>
+          <td>30-40 min</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- WEEK 1 -->
+    <section>
+      <h2 id="week1">📅 Week 1: Establish Your Weights</h2>
+      
+      <div class="week-section">
+        <h3 id="week1-a">Day A - Establish Barbell Weights</h3>
+        <div class="day-detail">
+          <h4>Barbell <span class="duration">60-75 min</span></h4>
+<pre>
+WARM-UP:
+  5-10 min light cardio (bike, row, jumping jacks)
+  3-5 warm-up sets building to working weight
+
+MAIN:
+  Back Squat 5set3rep
+    - Start light, add weight each set
+    - Find a weight where 5set3rep feels HARD but doable
+    - This is your baseline weight
+
+  Overhead Press 5set3rep
+    - Same approach
+    - Start lighter than you think
+
+FINISHER:
+  Pushups: 3-4 sets, stop 3 reps before failure
+  Pullups/Ring Rows: 2 sets, 5-8 reps each
+</pre>
+          <div class="protocol-box">
+            <h3>What does "stop 3 reps before failure" mean?</h3>
+            <p>If you can do 20 pushups max, do 17 per set (20 - 3 = 17).</p>
+            <p>If you can do 8 pullups max, do 5 per set (8 - 3 = 5).</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="week-section">
+        <h3 id="week1-b">Day B - Establish KB Reps</h3>
+        <div class="day-detail">
+          <h4>KB EMOM <span class="duration">30-40 min</span></h4>
+<pre>
+WARM-UP:
+  5 min light cardio + few practice swings
+
+MAIN:
+  20 min EMOM @ 7-10 swings per minute
+  
+  Start at 7 reps per minute.
+  Increase week over week at a comfortable pace up to 10 per minute.
+  This takes months to build up to.
+  
+  Option A: 2-hand swings every minute
+  Option B: Right hand min 1, Left hand min 2 (alternate)
+  
+  Total: 140-200 swings
+
+You can rest the remaining seconds each minute.
+</pre>
+        </div>
+      </div>
+      
+      <div class="week-section">
+        <h3 id="week1-c">Day C - Establish Bodyweight Reps</h3>
+        <div class="day-detail">
+          <h4>Bodyweight + KB HIIT <span class="duration">45-60 min</span></h4>
+<pre>
+WARM-UP:
+  5 min light cardio
+
+PART 1: BODYWEIGHT (20-25 min)
+  Pullups/Ring Rows: 4 sets, stop 3 reps before failure
+  Pushups: 4 sets, stop 3 reps before failure
+
+PART 2: KB HIIT
+  5 min EMOM @ 15-20 rpm
+    - Start at 15 swings per minute
+    - Increase week over week at a comfortable pace up to 20
+    - All 20 swings in a row, then rest the minute
+    - You might not get much recovery time, that's the point
+    - Once 20 is easy, upgrade to heavier bell
+    - When you upgrade bell size, go back to 15 reps per minute
+    - This progression takes months or years
+</pre>
+        </div>
+      </div>
+      
+      <div class="week-section">
+        <h3 id="week1-d">Day D - Establish Light Bodyweight</h3>
+        <div class="day-detail">
+          <h4>Bodyweight Light <span class="duration">30-40 min</span></h4>
+<pre>
+WARM-UP:
+  5 min light cardio
+
+MAIN:
+  Pullups/Ring Rows: 5 sets, stop 3 reps before failure
+  Pushups: 5 sets, stop 3 reps before failure
+</pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- WEEK 2 -->
+    <section>
+      <h2 id="week2">📅 Week 2: Same Weights</h2>
+      <div class="highlight-box">
+        Use the same weights as Week 1. If everything feels easy, you're ready to progress.
+      </div>
+      
+      <div class="week-section">
+        <h3 id="week2-a">Day A - Same Barbell</h3>
+        <div class="day-detail">
+          <h4>Barbell <span class="duration">60-75 min</span></h4>
+<pre>
+WARM-UP:
+  5-10 min light cardio
+  3-5 warm-up sets building to Week 1 weight
+
+MAIN:
+  Back Squat 5set3rep @ Week 1 weight
+  Overhead Press 5set3rep @ Week 1 weight
+
+FINISHER:
+  Pushups: 3-4 sets, stop 3 reps before failure
+  Pullups/Ring Rows: 2 sets, 5-8 reps each
+</pre>
+        </div>
+      </div>
+      
+      <div class="week-section">
+        <h3 id="week2-b">Day B - Keep Building</h3>
+        <div class="day-detail">
+          <h4>KB EMOM <span class="duration">30-40 min</span></h4>
+<pre>
+MAIN:
+  20 min EMOM @ 7-10 swings per minute
+  
+  Continue building toward 10 reps per minute, week over week.
+  Take your time - this is a months-long progression.
+  
+  Total: 140-200 swings
+</pre>
+        </div>
+      </div>
+      
+      <div class="week-section">
+        <h3 id="week2-c">Day C - Keep Building</h3>
+        <div class="day-detail">
+          <h4>Bodyweight + KB HIIT <span class="duration">45-60 min</span></h4>
+<pre>
+PART 1: <a href="#week1-c">See Week 1 Day C</a>
+PART 2: Keep working toward 20 reps per minute, week over week.
+</pre>
+        </div>
+      </div>
+      
+      <div class="week-section">
+        <h3 id="week2-d">Day D - Same Light</h3>
+        <div class="day-detail">
+          <h4>Bodyweight Light <span class="duration">30-40 min</span></h4>
+<pre>
+<a href="#week1-d">See Week 1 Day D</a>
+</pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- WEEK 3 -->
+    <section>
+      <h2 id="week3">📅 Week 3: Try +5lbs</h2>
+      <div class="warning-box">
+        <strong>Try adding 5lbs to squat or OHP.</strong> If it feels heavy, stay at Week 2 weight. If it feels okay, keep it.
+      </div>
+      
+      <div class="week-section">
+        <h3 id="week3-a">Day A - Try +5lbs</h3>
+        <div class="day-detail">
+          <h4>Barbell <span class="duration">60-75 min</span></h4>
+<pre>
+WARM-UP:
+  5-10 min light cardio
+  3-5 warm-up sets building up
+
+MAIN:
+  Back Squat 5set3rep
+    - Try +5lbs from Week 2
+    - If it feels heavy, use Week 2 weight instead
+    
+  Overhead Press 5set3rep
+    - Try +5lbs from Week 2
+    - If it feels heavy, use Week 2 weight instead
+
+FINISHER:
+  Pushups: 3-4 sets, stop 3 reps before failure
+  Pullups/Ring Rows: 2 sets, 5-8 reps each
+</pre>
+          <div class="protocol-box">
+            <h3>The Decision</h3>
+            <p><strong>5set3rep felt easy?</strong> → Next week, add 5lbs</p>
+            <p><strong>5set3rep felt heavy?</strong> → Stay at this weight next week</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="week-section">
+        <h3 id="week3-b">Day B - Continue Building</h3>
+        <div class="day-detail">
+          <h4>KB EMOM <span class="duration">30-40 min</span></h4>
+<pre>
+MAIN:
+  20 min EMOM @ 7-10 swings per minute
+  
+  Keep working toward 10 reps per minute, week over week.
+  Take as long as you need.
+  
+  Total: 140-200 swings
+</pre>
+        </div>
+      </div>
+      
+      <div class="week-section">
+        <h3 id="week3-c">Day C - Keep Building</h3>
+        <div class="day-detail">
+          <h4>Bodyweight + KB HIIT <span class="duration">45-60 min</span></h4>
+<pre>
+PART 1: <a href="#week1-c">See Week 1 Day C</a>
+PART 2: Continue building toward 20 reps per minute, week over week.
+</pre>
+        </div>
+      </div>
+      
+      <div class="week-section">
+        <h3 id="week3-d">Day D - Same Light</h3>
+        <div class="day-detail">
+          <h4>Bodyweight Light <span class="duration">30-40 min</span></h4>
+<pre>
+<a href="#week1-d">See Week 1 Day D</a>
+</pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- WEEK 4 -->
+    <section>
+      <h2 id="week4">📅 Week 4: Decide</h2>
+      <div class="highlight-box">
+        <strong>Did Week 3 work?</strong> Keep the new weights. Did it feel heavy? Go back to Week 2 weights and try again next month.
+      </div>
+      
+      <div class="week-section">
+        <h3 id="week4-a">Day A - Final Decision</h3>
+        <div class="day-detail">
+          <h4>Barbell <span class="duration">60-75 min</span></h4>
+<pre>
+MAIN:
+  Back Squat 5set3rep @ your decision weight
+  Overhead Press 5set3rep @ your decision weight
+
+FINISHER:
+  Pushups: 3-4 sets, stop 3 reps before failure
+  Pullups/Ring Rows: 2 sets, 5-8 reps each
+</pre>
+          <div class="protocol-box">
+            <h3>Your Decision</h3>
+            <p>If Week 3 felt good → Keep new weight</p>
+            <p>If Week 3 felt heavy → Use Week 2 weight</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="week-section">
+        <h3 id="week4-b">Day B - Keep Building</h3>
+        <div class="day-detail">
+          <h4>KB EMOM <span class="duration">30-40 min</span></h4>
+<pre>
+MAIN:
+  20 min EMOM @ 7-10 swings per minute
+  
+  Continue building toward 10 reps per minute.
+  This takes months.
+  
+  Total: 140-200 swings
+</pre>
+        </div>
+      </div>
+      
+      <div class="week-section">
+        <h3 id="week4-c">Day C - Keep Building</h3>
+        <div class="day-detail">
+          <h4>Bodyweight + KB HIIT <span class="duration">45-60 min</span></h4>
+<pre>
+PART 1: <a href="#week1-c">See Week 1 Day C</a>
+PART 2: Continue building toward 20 reps per minute
+</pre>
+        </div>
+      </div>
+      
+      <div class="week-section">
+        <h3 id="week4-d">Day D - Same Light</h3>
+        <div class="day-detail">
+          <h4>Bodyweight Light <span class="duration">30-40 min</span></h4>
+<pre>
+<a href="#week1-d">See Week 1 Day D</a>
+</pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- KB PROGRESSIONS -->
+    <section>
+      <h2>📚 KB Long-Term Progression</h2>
+      
+      <div class="day-detail">
+        <h4>KB EMOM</h4>
+<pre>
+Build from 7 to 10 reps per minute, week over week.
+This takes months.
+
+Once at 10/min and it feels easy, upgrade to heavier bell.
+When you upgrade bell size, go back to 7 reps per minute.
+
+Trained adults usually only go up in KB weight once or twice over 5 years.
+Ballistics don't require constant weight jumps.
+</pre>
+      </div>
+      
+      <div class="day-detail">
+        <h4>KB HIIT</h4>
+<pre>
+Start at 15 reps per minute.
+Increase week over week at a comfortable pace up to 20.
+
+Once 20 is easy, upgrade to heavier bell.
+When you upgrade bell size, go back to 15 reps per minute.
+
+This progression takes months or years.
+</pre>
+      </div>
+    </section>
+
+    <!-- PULLUP PROGRESSION -->
+    <section>
+      <h2>📚 Pullup Progression</h2>
+      <div class="day-detail">
+<pre>
+Can't do pullups?
+  1. Ring Rows (start here)
+  2. Incline Pullups (feet on bench/chair)
+  3. Strict Pullups (goal)
+
+Each level: 4 sets, stop 3 reps before failure
+Progress when you can do 4 sets of 8+ reps easily.
+</pre>
+      </div>
+    </section>
+
+    <!-- EQUIPMENT -->
+    <section>
+      <h2>🔧 Equipment Alternatives</h2>
+      <table>
+        <tr><th>If no kettlebell</th><th>Use</th><th>Notes</th></tr>
+        <tr><td>For swings</td><td>DB Hang Snatch</td><td>Dumbbell, hang to lockout only, not to floor</td></tr>
+        <tr><td>For snatches</td><td>KB Snatch</td><td>The king - requires skill</td></tr>
+      </table>
+    </section>
+
+    <!-- OTHER -->
+    <section>
+      <h2>📋 Other</h2>
+      
+      <div class="highlight-box">
+        <strong>Protein:</strong> 130-150g/day minimum
+      </div>
+      
+      <ul style="margin-left: 20px;">
+        <li><strong>Creatine:</strong> 5g/day</li>
+        <li><strong>Sleep:</strong> 7-9 hours</li>
+        <li><strong>Hydration:</strong> 1 oz per lb bodyweight</li>
+      </ul>
+    </section>
+
+    <!-- WARNING -->
+    <section>
+      <h2>⚠️ When to Back Off</h2>
+      <p>Deload when YOU need to, not on a schedule. Add an extra rest day or reduce volume if:</p>
+      <ul style="margin-left: 20px; margin-top: 10px;">
+        <li>Sleep quality drops</li>
+        <li>Joint pain that doesn't resolve</li>
+        <li>The weights feel heavy when they shouldn't</li>
+        <li>Activity performance suffers</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p><em>The Simple Protocol: Establish weights → Keep going → Add weight when easy → Back off when heavy.</em></p>
+      <p style="margin-top: 10px;">May 2026</p>
+    </footer>
+  </div>
+</body>
+</html>
